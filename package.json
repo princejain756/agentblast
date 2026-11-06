@@ -1,0 +1,40 @@
+{
+  "name": "agentblast",
+  "version": "0.1.0",
+  "description": "Zero-dependency static config & transcript replay auditor that measures the real production blast radius of Claude Code and Codex CLI agents (root SSH, plaintext API keys, rm -rf, secret reads, infra mutations) and emits least-privilege permission policies.",
+  "type": "module",
+  "bin": {
+    "agentblast": "./bin/agentblast.mjs"
+  },
+  "main": "./src/analyzer.mjs",
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test tests/agentblast.test.mjs",
+    "demo": "node ./bin/agentblast.mjs --demo"
+  },
+  "keywords": [
+    "claude-code",
+    "codex",
+    "ai-agents",
+    "security",
+    "devops",
+    "least-privilege",
+    "blast-radius",
+    "linter",
+    "audit"
+  ],
+  "author": "Prince Jain <princejain756@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princejain756/agentblast.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
